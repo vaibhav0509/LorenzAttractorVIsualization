@@ -1,3 +1,4 @@
+import peasy.*;
 float x = 0.01;
 float y = 0;
 float z = 0;
@@ -8,11 +9,12 @@ float c = 8.0/3.0;
 
 ArrayList<PVector> points = new ArrayList<PVector>();
 
-//PeasyCam cam;
+PeasyCam cam;
 
 void setup(){
     size(800,600, P3D);
     colorMode(HSB);
+    cam = new PeasyCam(this, 500);
     
     
 
@@ -30,7 +32,8 @@ void draw(){
   
   points.add(new PVector(x, y, z));
   
-  translate(0, 0, 0);
+  //translate(0, 0, 0);
+  //translate(width/2,height,2);
   scale(5);
   stroke(255);
   noFill();
